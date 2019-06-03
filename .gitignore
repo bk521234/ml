@@ -1,0 +1,6 @@
+# ignore testing data
+aclImdb/*
+
+# ignore cache files
+*.pyc
+
