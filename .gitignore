@@ -1,6 +1,9 @@
 # ignore testing data
 aclImdb/*
 
+# ignore movies data
+the-movies-dataset/*
+
 # ignore cache files
 *.pyc
 
