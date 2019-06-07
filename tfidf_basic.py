@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # list of text documents
 text = [
     "The quick brown fox jumped over the lazy dog.",
-    "The dog.",
+    "The dog. Octopus.",
     "The fox"
 ]
 
