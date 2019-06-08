@@ -3,6 +3,7 @@ aclImdb/*
 
 # ignore movies data
 the-movies-dataset/*
+kangaroo/*
 
 # ignore cache files
 *.pyc
