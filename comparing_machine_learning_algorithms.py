@@ -15,6 +15,8 @@ dataframe = pandas.read_csv(url, names=names)
 array = dataframe.values
 X = array[:,0:8]
 Y = array[:,8]
+print(X)
+
 # prepare configuration for cross validation test harness
 seed = 7
 # prepare models

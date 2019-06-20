@@ -1,4 +1,4 @@
-# confirm mtcnn was isntalled correctly
+# confirm mtcnn was installed correctly
 import mtcnn
 
 # face detection with mtcnn on a photograph
@@ -17,7 +17,7 @@ def draw_image_with_boxes(filename, result_list):
     # plot the image
     pyplot.imshow(data)
 
-    # get the context from frawing boxes
+    # get the context from framing boxes
     ax = pyplot.gca()
 
     # plot each box
@@ -60,7 +60,7 @@ def draw_faces(filename, result_list):
     pyplot.show()
 
 # load image from file
-filename = 'test2.jpg'
+filename = 'test4.jpg'
 pixels = pyplot.imread(filename)
 
 # create the detector, using default weights

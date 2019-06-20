@@ -14,6 +14,8 @@ dataset = numpy.loadtxt('pima-indians-diabetes-data.csv', delimiter=',')
 # split into input (X) and output (Y) variables
 X = dataset[:, 0:8]
 Y = dataset[:, 8]
+print(X.shape)
+print(Y.shape)
 
 # create model
 model = Sequential()
