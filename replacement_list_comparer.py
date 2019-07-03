@@ -42,6 +42,8 @@ class ReplacementListComparer():
             if old_item in self.new_list:
                 # YoY match
                 print("FOUND EXACT MATCH: {}".format(old_item))
+                #translation[old_item] = old_item
+
                 continue
             elif any(substring for substring in self.json_translation_dict_keys if substring in old_item ):
                 answer = self.search_for_common_replacements_match(old_item)
