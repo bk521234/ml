@@ -32,5 +32,45 @@ plt.plot(df['Close'], label='Close Price History')
 plt.show()
 
 
+# implementation of moving average
+# creating datagrame with date and the target variable
+data = df.sort_index(ascending=True, axis=0)
+new_data = pd.DataFrame(index=range(0,len(df)),columns=['Date', 'Close'])
+
+for i in range(0,len(data)):
+	new_data['Date'][i] = data['Date'][i]
+	new_data['Close'][i] = data['Close'][i]
+
+# splitting into train and validation
+train = new_data[:987]
+valid = new_data[987:]
+
+print(new_data.shape)
+print(train.shape)
+print(valid.shape)
+
+print(train['Date'].min())
+print(train['Date'].max())
+print(valid['Date'].min())
+print(valid['Date'].max())
+
+# make predictions
+preds = []
+for i in range(0,248):
+	a = train['Close'][len(train)-248+i:].sum() + sum(preds)
+	b = a/248
+	preds.append(b)
+
+# calculate rmse
+rms=np.sqrt(np.mean(np.power((np.array(valid['Close'])-preds),2)))
+print(rms)
+
+
+#plot
+valid['Predictions'] = 0
+valid['Predictions'] = preds
+plt.plot(train['Close'])
+plt.plot(valid[['Close', 'Predictions']])
+plt.show()
 
 
