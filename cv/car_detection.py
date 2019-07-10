@@ -1,12 +1,15 @@
 # OpenCV Python program to detect cars in video frame 
 # import libraries of python OpenCV  
 import cv2 
-  
+import os
+
+FILE_DIR = os.path.dirname(__file__)
+
 # capture frames from a video 
-cap = cv2.VideoCapture('video.avi') 
+cap = cv2.VideoCapture(os.path.join( FILE_DIR, 'video.avi'))
   
 # Trained XML classifiers describes some features of some object we want to detect 
-car_cascade = cv2.CascadeClassifier('cars.xml') 
+car_cascade = cv2.CascadeClassifier(os.path.join( FILE_DIR, 'cars.xml'))
   
 # loop runs if capturing has been initialized. 
 while True: 

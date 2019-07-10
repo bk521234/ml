@@ -8,3 +8,5 @@ kangaroo/*
 # ignore cache files
 *.pyc
 
+
+.vscode/
