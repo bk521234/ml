@@ -21,7 +21,7 @@ while(True):
     # Converts to grayscale space, OCV reads colors as BGR 
     # frame is converted to gray 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) 
-      
+    
     # output the frame 
     out.write(gray)  
       
