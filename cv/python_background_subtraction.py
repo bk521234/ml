@@ -1,8 +1,8 @@
 # Python code for Background subtraction using OpenCV 
 import numpy as np 
 import cv2 
-  
-cap = cv2.VideoCapture('/home/username/Downloads/people-walking.mp4') 
+
+cap = cv2.VideoCapture('Two people walk up to home, walk away after seeing security camera-bFrwLUjXcLs.mp4')
 fgbg = cv2.createBackgroundSubtractorMOG2() 
   
 while(1): 
